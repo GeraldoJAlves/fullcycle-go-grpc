@@ -1,0 +1,14 @@
+version: '3'
+services:
+  mysql:
+    image: mysql:8
+    ports:
+      - 3306:3306
+    network_mode: "host"
+    environment:
+      - MYSQL_USER=fullcycle
+      - MYSQL_PASS=123456
+      - MSYQL_DATABASE=fullcycle
+      - MYSQL_ROOT_PASSWORD=123456
+    volumes:
+      - ./initial-script.sql:/docker-entrypoint-initdb.d/1.sql
