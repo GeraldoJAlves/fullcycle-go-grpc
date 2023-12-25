@@ -1,0 +1,19 @@
+syntax = "proto3";
+package pb;
+option go_package = "internal/pb";
+
+message blank {}
+
+message Category {
+    string id = 1;
+    string name = 2;
+    string description = 3;
+}
+
+message CategoryList {
+    repeated Category categories = 1;
+}
+
+service CategoryService {
+    rpc ListCategories(blank) returns (CategoryList) {}
+}
