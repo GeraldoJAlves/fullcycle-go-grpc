@@ -1,4 +1,4 @@
-# Fullcycle comunicatio with gRPC
+# Fullcycle comunication with gRPC
 
 ## Pre requisites
  - go > 1.20
